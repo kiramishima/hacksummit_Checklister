@@ -1,0 +1,30 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "hacksummit",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node runner.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015-node": "^5.0.2",
+    "babel-preset-stage-3": "^6.5.0",
+    "babel-register": "^6.5.2"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "bluebird": "^3.3.1",
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "express": "^4.13.4",
+    "influx": "^4.1.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.4.4",
+    "morgan": "^1.7.0",
+    "socket.io": "^1.4.5"
+  }
+}
