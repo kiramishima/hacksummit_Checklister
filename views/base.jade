@@ -1,0 +1,36 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title Checklister
+        <!-- Material Design fonts -->
+        link(href="//fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+        <!-- Material Design -->
+        link(href="/vendor/angular-material/angular-material.min.css", rel="stylesheet")
+    body(ng-app="Checklister", ng-cloak)
+        md-content
+            md-toolbar(class="md-primary")
+                div.md-toolbar-tools
+                    md-button.md-icon-button(aria-label="Settings")
+                        md-icon(md-font-set="material-icons") view_headline
+                    h2.md-flex Toolbar with Icon Buttons
+                
+        md-content(layout="column", ui-view)
+        
+        script(src="/vendor/jquery/dist/jquery.min.js")
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        script(src="https://trello.com/1/client.js?key=a5d2e4da6dde66e7147c333829bf1359")
+        script(src="/vendor/angular/angular.min.js")
+        script(src="/vendor/angular-aria/angular-aria.js")
+        script(src="/vendor/angular-animate/angular-animate.js")
+        script(src="/vendor/angular-material/angular-material.js")
+        script(src="/vendor/angular-jwt/dist/angular-jwt.min.js")
+        script(src="/vendor/angular-ui-router/release/angular-ui-router.min.js")
+        script(src="/js/app.js")
+        script(src="/js/app/service/main.service.js")
+        script(src="/js/app/service/login.service.js")
+        script(src="/js/app/controller/main.js")
+        script(src="/js/app/controller/auth.js")
+        

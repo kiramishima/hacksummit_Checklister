@@ -1,0 +1,32 @@
+<div layout="column" layout-xs="column" layout-margin ng-cloak>
+    <div flex>&nbsp;</div>
+    <div flex>
+        <div layout="row">
+            <div flex>&nbsp;</div>
+            <div flex>
+                <form name="loginForm" ng-submit="">
+                    <legend></legend>
+                    <md-input-container class="md-icon-float md-block">
+                        <label>Username</label>
+                        <md-icon md-svg-icon="account" class="name"></md-icon>
+                        <input required name="username" ng-model="Auth.account.username">
+                        <div ng-messages="loginForm.username.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-icon-float md-block">
+                        <label>Password</label>
+                        <md-icon md-svg-icon="account-key" class="name"></md-icon>
+                        <input type="password" required name="password" ng-model="Auth.account.password">
+                        <div ng-messages="loginForm.password.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    <md-button class="md-raised">Access</md-button>
+                </form>
+            </div>
+            <div flex>&nbsp;</div>
+        </div>
+    </div>
+    <div flex>&nbsp;</div>
+</div>

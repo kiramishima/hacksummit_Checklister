@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 app.set('superSecret', 'hack.summit')
 app.set('view engine', 'jade')
-
+app.use(express.static('public'))
 // route conf
 const router = new Router()
 
@@ -20,7 +20,6 @@ import login from './app/routes/login/index.js'
 login(app, router)
 import signup from './app/routes/signup/index.js'
 signup(router)
-
 
 app.use('/api', router)
 

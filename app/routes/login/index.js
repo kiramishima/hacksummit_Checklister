@@ -18,7 +18,7 @@ var compare = function (password, hash) {
 export default function (app, router) {
   router.route('/login')
     .get((req, res) => {
-      res.render('index', { message: 'hooray! welcome to our api!', title: 'API Documentation' })
+      res.render('base', { message: 'hooray! welcome to our api!', title: 'API Documentation' })
     })
     .post( async (req, res) => {
       let user = await User.findOne({name: req.body.username}).exec()

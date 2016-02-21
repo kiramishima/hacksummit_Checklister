@@ -13,7 +13,9 @@
     "babel": "^6.5.2",
     "babel-preset-es2015-node": "^5.0.2",
     "babel-preset-stage-3": "^6.5.0",
-    "babel-register": "^6.5.2"
+    "babel-register": "^6.5.2",
+    "gulp": "^3.9.1",
+    "gulp-tsc": "^1.1.4"
   },
   "dependencies": {
     "bcrypt": "^0.8.5",
