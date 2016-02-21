@@ -23,8 +23,12 @@
     "express": "^4.13.4",
     "influx": "^4.1.0",
     "jade": "^1.11.0",
+    "jsonwebtoken": "^5.7.0",
+    "lodash": "^4.5.0",
     "mongoose": "^4.4.4",
+    "mongoose-hidden": "^0.6.1",
     "morgan": "^1.7.0",
+    "node-uuid": "^1.4.7",
     "socket.io": "^1.4.5"
   }
 }
