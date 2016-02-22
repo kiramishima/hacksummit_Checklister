@@ -2,17 +2,16 @@
 module Services {
     "use strict";
     export interface ILoginService {
-        submit(params:any);
+        submit(params:any) : ng.IHttpPromise<{}>;
     }
     export class Login implements ILoginService {
-        public $inject = ["$http"];
+        public $inject = ["$http", "API"];
         constructor(
-            public $http: ng.IHttpService
+            public $http: ng.IHttpService,
+            public API: any
         ){}
-        submit (params:any) {
-            this.$http.post("", params).then((res: any) => {
-               console.log(res);
-            });
+        submit (params:any): ng.IHttpPromise<{}> {
+            return this.$http.post(this.API + "login", params);
         }
     }
 }

@@ -12,6 +12,7 @@ module Services {
            this.user = {
                id: "1",
                name: "Kiramishima",
+               level: "Web Developer",
                services: ["trello", "github"],
                Tasks: [
                    {type: "Github", task: "UX Design", id: "1x"},

@@ -3,14 +3,13 @@ var Services;
 (function (Services) {
     "use strict";
     var Login = (function () {
-        function Login($http) {
+        function Login($http, API) {
             this.$http = $http;
-            this.$inject = ["$http"];
+            this.API = API;
+            this.$inject = ["$http", "API"];
         }
         Login.prototype.submit = function (params) {
-            this.$http.post("", params).then(function (res) {
-                console.log(res);
-            });
+            return this.$http.post(this.API + "login", params);
         };
         return Login;
     })();

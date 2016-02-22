@@ -1,32 +1,83 @@
 <div layout="column" layout-xs="column" layout-margin ng-cloak>
-    <div flex>&nbsp;</div>
     <div flex>
         <div layout="row">
-            <div flex>&nbsp;</div>
-            <div flex>
-                <form name="loginForm" ng-submit="">
-                    <legend></legend>
-                    <md-input-container class="md-icon-float md-block">
-                        <label>Username</label>
-                        <md-icon md-svg-icon="account" class="name"></md-icon>
-                        <input required name="username" ng-model="Auth.account.username">
-                        <div ng-messages="loginForm.username.$error">
-                            <div ng-message="required">This is required.</div>
-                        </div>
-                    </md-input-container>
-                    <md-input-container class="md-icon-float md-block">
-                        <label>Password</label>
-                        <md-icon md-svg-icon="account-key" class="name"></md-icon>
-                        <input type="password" required name="password" ng-model="Auth.account.password">
-                        <div ng-messages="loginForm.password.$error">
-                            <div ng-message="required">This is required.</div>
-                        </div>
-                    </md-input-container>
-                    <md-button class="md-raised">Access</md-button>
-                </form>
+            <div flex="20">
+                <img style="width: 100px;" src="https://avatars3.githubusercontent.com/u/12620426?v=3&s=460" alt="">
             </div>
-            <div flex>&nbsp;</div>
+            <div flex>
+                <div layout="row">
+                    <div flex="80" layout="column">
+                        <h3 flex>{{ Main.user.name }}</h3>
+                        <h4 flex>{{ Main.user.level }}</h4>
+                        <md-icon md-svg-icon="trello"></md-icon>
+                    </div>
+                    <div flex layout="column" layout-align="center center">
+                        
+                        <md-fab-speed-dial md-open="Main.isOpen" md-direction="{{Main.selectedDirection}}"
+                         ng-class="Main.selectedMode">
+                            <md-fab-trigger>
+                                <md-button ng-click="Main.findTask()" class="md-fab md-mini md-primary" aria-label="Use Android">
+                                    <md-icon md-font-set="material-icons" style="color: greenyellow;">add</md-icon>
+                                </md-button>
+                            </md-fab-trigger>
+                            <md-fab-actions>
+                                <md-button aria-label="Twitter" class="md-fab md-mini md-primary">
+                                    <md-icon md-font-set="material-icons" aria-label="Twitter">person add</md-icon>
+                                </md-button>
+                                <md-button aria-label="Facebook" class="md-fab md-mini md-primary">
+                                    <md-icon md-font-set="material-icons" aria-label="Facebook">person add</md-icon>
+                                </md-button>
+                                <md-button aria-label="Google Hangout" class="md-fab md-mini md-primary">
+                                    <md-icon md-font-set="material-icons" aria-label="Google Hangout">person add</md-icon>
+                                </md-button>
+                            </md-fab-actions>
+                        </md-fab-speed-dial>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
-    <div flex>&nbsp;</div>
+    <h1 class="page-header" flex>Overview</h1>
+    
+    <div flex layout="row" layout-xs="column">
+        <md-card flex>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Tasks</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content layout="row">
+                <md-list>
+                    <md-list-item class="md-3-line" ng-repeat="task in Main.user.Tasks">
+                        <img class="md-avatar" alt="git" />
+                        <div class="md-list-item-text" layout="column">
+                            <md-progress-linear md-mode="determinate" value="40"></md-progress-linear>
+                            <h4>{{ task.task }}</h4>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                
+            </md-card-content>
+        </md-card>
+        <md-card flex>
+            <md-card-actions layout="row" layout-align="end center">
+            <md-button ng-click="Main.findTask()" class="md-fab md-mini md-primary" aria-label="Use Android">
+                <md-icon md-font-set="material-icons" style="color: greenyellow;">add</md-icon>
+            </md-button>
+            <md-button ng-click="Main.findTask()" class="md-fab md-mini md-primary" aria-label="Use Android">
+                <md-icon md-font-set="material-icons" style="color: greenyellow;">add</md-icon>
+            </md-button>
+            </md-card-actions>
+            <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Card with image</span>
+                <span class="md-subhead">Large</span>
+            </md-card-title-text>
+            <md-card-title-media>
+                <div class="md-media-lg card-media"></div>
+            </md-card-title-media>
+            </md-card-title>
+        </md-card>
+    </div>
 </div>

@@ -27,7 +27,7 @@ export default function (app, router) {
           res.json({message: 'Invalid user/password combination.', success: false})
       } else {
           var token = jwt.sign(user, app.get('superSecret'), {
-            expiresInMinutes: 1440 // expires in 24 hours
+            expiresIn: 1440 // expires in 24 hours
           })
           res.json({
             message: 'Success Login', 
